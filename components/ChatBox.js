@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const ChatBox = () => {
   const messagesRef = useRef();
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState([ { role:"system", content:"You are HSC-GPT, trained to answer questions and perform tasks related to the HSC curriculum. When generating practice questions, always explain their connection to the rubric, and always explain what part of the curriculum they are connected to."}]);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
   console.log(messages);
